@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Clock, TrendingUp, Zap, Database, Brain, Sparkles } from "lucide-react";
+import { ArrowRight, Clock, TrendingUp, Zap, Database, Brain, Sparkles, Microscope } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-lab-ai.jpg";
 import spectralWaves from "@/assets/spectral-waves.jpg";
 
@@ -36,18 +37,26 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+              <Link to="/analyzer">
+                <Button 
+                  size="lg" 
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-glow text-lg px-8 py-6 transition-smooth w-full sm:w-auto"
+                >
+                  <Microscope className="mr-2" /> Try Live Demo
+                </Button>
+              </Link>
               <Button 
                 size="lg" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-glow text-lg px-8 py-6 transition-smooth"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6 transition-smooth"
               >
-                Schedule a Demo <ArrowRight className="ml-2" />
+                Schedule Investor Call <ArrowRight className="ml-2" />
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
                 className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm text-lg px-8 py-6 transition-smooth"
               >
-                Investor Deck
+                Download Pitch Deck
               </Button>
             </div>
           </div>
@@ -310,9 +319,17 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
+              <Link to="/analyzer">
+                <Button 
+                  size="lg" 
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-glow text-xl px-12 py-8 transition-smooth w-full sm:w-auto"
+                >
+                  <Microscope className="mr-2" /> Try the Platform
+                </Button>
+              </Link>
               <Button 
                 size="lg" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-glow text-xl px-12 py-8 transition-smooth"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground text-xl px-12 py-8 transition-smooth"
               >
                 Schedule Investor Call <ArrowRight className="ml-2" />
               </Button>
